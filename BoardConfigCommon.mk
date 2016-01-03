@@ -17,7 +17,6 @@
 -include hardware/ti/omap4/BoardConfigCommon.mk
 
 TARGET_NO_BOOTLOADER := true
-TARGET_NO_RADIOIMAGE := true
 
 TARGET_BOARD_OMAP_CPU := 4430
 TARGET_BOOTLOADER_BOARD_NAME := piranha
@@ -31,8 +30,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_BASE := 0x40000000
 
 # Init
-TARGET_PROVIDES_INIT := true
-TARGET_PROVIDES_INIT_TARGET_RC := true
+TARGET_PROVIDES_INIT_RC := true
 
 # Bionic/libc
 MALLOC_IMPL := dlmalloc
@@ -57,7 +55,6 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun%d/
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
-BOARD_WLAN_DEVICE_REV            := bcm4330_b1
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
@@ -87,16 +84,11 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 # Liblights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# Sensors
-BOARD_USE_LEGACY_SENSORS_FUSION := false
-
 # Selinux
 BOARD_SEPOLICY_DIRS += device/samsung/espressowifi/sepolicy
 
 # Recovery
 BOARD_CANT_BUILD_RECOVERY_FROM_BOOT_PATCH := true
-BOARD_SUPPRESS_EMMC_WIPE := true
-BOARD_UMS_LUNFILE := "/sys/class/android_usb/f_mass_storage/lun0/file"
 RECOVERY_FSTAB_VERSION := 2
 TARGET_RECOVERY_DEVICE_DIRS += device/samsung/espressowifi
 TARGET_RECOVERY_FSTAB := device/samsung/espressowifi/rootdir/etc/fstab.espresso
@@ -105,9 +97,6 @@ TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 ifneq ($(RECOVERY_VARIANT),twrp)
 # CM
     BOARD_HAS_DOWNLOAD_MODE := true
-    BOARD_HAS_NO_MISC_PARTITION := true
-    BOARD_HAS_NO_SELECT_BUTTON := true
-    BOARD_USES_MMCUTILS := true
 else
 # TWRP
     BOARD_CUSTOM_BOOTIMG_MK := device/samsung/espressowifi/custombootimg.mk
