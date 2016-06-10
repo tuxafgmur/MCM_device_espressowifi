@@ -13,6 +13,7 @@ rm -fr $WSYSTEMDIR/etc/nano
 rm -fr $WSYSTEMDIR/etc/terminfo
 rm -f  $WSYSTEMDIR/etc/init.d/{00banner,90userinit}
 rm -f  $WSYSTEMDIR/lib/hw/power.*.so
+rm -f  $WSYSTEMDIR/lib/hw/audio.primary.default.so
 rm -fr $WSYSTEMDIR/usr/share/vim
 rm -f  $WSYSTEMDIR/xbin/bash
 rm -f  $WSYSTEMDIR/xbin/nano
@@ -35,6 +36,7 @@ sed '/dalvik.vm.stack-trace-file/d'                                         -i $
 sed '/ro.expect.recovery_id/d'                                              -i $WSYSTEMDIR/build.prop
 sed 's/dalvik.vm.heapstartsize=.*/dalvik.vm.heapstartsize=8m/'              -i $WSYSTEMDIR/build.prop
 sed 's/dalvik.vm.heapgrowthlimit=.*/dalvik.vm.heapgrowthlimit=64m/'         -i $WSYSTEMDIR/build.prop
+sed 's/dalvik.vm.heapsize=.*/dalvik.vm.heapsize=174m/'                      -i $WSYSTEMDIR/build.prop
 sed "s/wifi.supplicant_scan_interval=.*/wifi.supplicant_scan_interval=180/" -i $WSYSTEMDIR/build.prop
 
 if [ `echo $1 | grep espresso3g` ]; then
