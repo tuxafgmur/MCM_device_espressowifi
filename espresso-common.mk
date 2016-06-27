@@ -160,6 +160,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bq.gpu_to_cpu_unsupported=1 \
     ro.sf.lcd_density=160
 
+# Do not start Atlas Service (Low ram device)
+PRODUCT_PROPERTY_OVERRIDES += \
+    config.disable_atlas=true
+
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-flags=--no-watch-dog
 
