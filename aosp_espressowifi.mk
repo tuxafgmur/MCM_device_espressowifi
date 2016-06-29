@@ -1,4 +1,3 @@
-#
 # Copyright 2013 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,10 +15,10 @@
 # This is a wifi-only device
 PRODUCT_PROPERTY_OVERRIDES += ro.carrier=wifi-only
 
-# Inherit from the common Open Source product configuration
+# Common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-# Inherit device configuration
+# Device configuration
 $(call inherit-product, device/samsung/espressowifi/device.mk)
 
 PRODUCT_NAME := aosp_espressowifi

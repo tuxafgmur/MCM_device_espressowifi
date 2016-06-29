@@ -1,4 +1,3 @@
-#
 # Copyright (C) 2016 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,9 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-include device/samsung/espressowifi/BoardConfigCommon.mk
+-include device/samsung/espressowifi/BoardConfigCommon.mk
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := espressowifi,espressowifixx,p3110,GT-P3110,p3113,GT-P3113,espresso10wifi,espresso10wifixx,p5110,GT-P5110,p5113,GT-P5113
