@@ -39,6 +39,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/espressowifi/blobs-common/proprietary/system/lib/libdrmdecrypt.so:system/lib/libdrmdecrypt.so \
     device/samsung/espressowifi/blobs-common/proprietary/system/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
     device/samsung/espressowifi/blobs-common/proprietary/system/vendor/lib/libWVStreamControlAPI_L3.so:system/vendor/lib/libWVStreamControlAPI_L3.so \
+    device/samsung/espressowifi/blobs-common/proprietary/system/vendor/lib/libdrmmtkutil.so:system/vendor/lib/libdrmmtkutil.so \
     device/samsung/espressowifi/blobs-common/proprietary/system/vendor/lib/libstlport.so:system/vendor/lib/libstlport.so \
     device/samsung/espressowifi/blobs-common/proprietary/system/vendor/lib/libwvdrm_L3.so:system/vendor/lib/libwvdrm_L3.so \
     device/samsung/espressowifi/blobs-common/proprietary/system/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
