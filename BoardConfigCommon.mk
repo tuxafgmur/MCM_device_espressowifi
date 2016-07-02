@@ -46,12 +46,6 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # F2FS filesystem
 TARGET_USERIMAGES_USE_F2FS := true
 
-# Vold
-BOARD_VOLD_MAX_PARTITIONS := 12
-BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun%d/file"
-
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
@@ -75,7 +69,6 @@ BOARD_NO_APSME_ATTR              := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/espressowifi/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/espressowifi/bluetooth/vnd_espresso.txt
 
 # Charger
 BOARD_CHARGER_SHOW_PERCENTAGE := true
