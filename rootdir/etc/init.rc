@@ -317,9 +317,6 @@ on property:vold.decrypt=trigger_shutdown_framework
 on property:sys.powerctl=*
     powerctl ${sys.powerctl}
 
-on property:ro.debuggable=1
-    start console
-
 service ueventd /sbin/ueventd
     class core
     critical
@@ -391,7 +388,7 @@ service netd /system/bin/netd
     socket fwmarkd stream 0660 root inet
 
 service debuggerd /system/bin/debuggerd
-    class main
+    disabled
     writepid /dev/cpuset/system-background/tasks
 
 service ril-daemon /system/bin/rild
