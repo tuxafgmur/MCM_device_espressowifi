@@ -18,7 +18,6 @@ rm -fr $WSYSTEMDIR/usr/share/vim
 rm -f  $WSYSTEMDIR/xbin/bash
 rm -f  $WSYSTEMDIR/xbin/nano
 rm -f  $WSYSTEMDIR/xbin/vim
-rm -f  $WSYSTEMDIR/micro_bench_static
 rm -f  $WSYSTEMDIR/xbin/{ls,ps}
 
 [ -e $WSYSTEMDIR/xbin/fstrim ] || ln -s ./busybox $WSYSTEMDIR/xbin/fstrim
@@ -37,7 +36,7 @@ sed '/ro.expect.recovery_id/d'                                              -i $
 sed 's/dalvik.vm.heapstartsize=.*/dalvik.vm.heapstartsize=8m/'              -i $WSYSTEMDIR/build.prop
 sed 's/dalvik.vm.heapgrowthlimit=.*/dalvik.vm.heapgrowthlimit=64m/'         -i $WSYSTEMDIR/build.prop
 sed 's/dalvik.vm.heapsize=.*/dalvik.vm.heapsize=174m/'                      -i $WSYSTEMDIR/build.prop
-sed "s/wifi.supplicant_scan_interval=.*/wifi.supplicant_scan_interval=180/" -i $WSYSTEMDIR/build.prop
+sed "s/ro.build.type=.*/ro.build.type=userdebug/"                           -i $WSYSTEMDIR/build.prop
 
 if [ `echo $1 | grep espresso3g` ]; then
     sed "s/ro.build.product=.*/ro.build.product=espressorf/"                -i $WSYSTEMDIR/build.prop
